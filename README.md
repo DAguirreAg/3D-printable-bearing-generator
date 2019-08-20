@@ -6,30 +6,25 @@ Generate 3D printable bearings according to your dimension constrains.
 </p>
 
 ## 1. Introduction
-Many hobbyist face the problem of needing some bearings that are lightweight and cheap enough for their applications
+Many hobbyist face the problem of needing some bearings that are lightweight and cheap enough for their applications. However, more times than not, the available sizes don´t match your application or they are to much of an overkill to be used. To solve these issues I decided to develop a Fusion 360 script which generates bearings depending on your input parameters.
 
 <p align="middle">
-  <img src="/images/3D printed bearing.jpg" alt="Photo of a 3D printed bearing" width=300>
+  <img src="/images/3D printed bearing.jpg" alt="Photo of a 3D printed bearing" width=200>
 
-  <img src="/images/Generated Fusion 360 file.png" alt="Generated bearing" width=300>
+  <img src="/images/Generated Fusion 360 file.png" alt="Generated bearing" width=200>
 
-  <img src="/images/Generated Fusion 360 file section.png" alt="A section view of the generated bearing" width=300>
+  <img src="/images/Generated Fusion 360 file section.png" alt="A section view of the generated bearing" width=200>
 </p>
 
-However, more times than not, the available sizes don´t match your application or they are to much of an overkill to be used.
-
-To solve these issues I decided to develop a Fusion 360 script which generates bearings depending on your input parameters.
 
 ## 2. How to use
 Start by downloading and installing the script into your Fusion 360. Check [here](https://knowledge.autodesk.com/support/fusion-360/troubleshooting/caas/sfdcarticles/sfdcarticles/How-to-install-an-ADD-IN-and-Script-in-Fusion-360.html) for a quick guide.
  
-Once installed open the script and modify the  following bearing's parameters: 
+Once installed open the script and modify the following bearing's parameters: 
 
 <p align="middle">
-  <img src="/images/Bearing parameters.png" alt="The input parameters to generate the bearing" width=300>
+  <img src="/images/Bearing parameters.png" alt="The input parameters to generate the bearing" width=500>
 </p>
-
-The script will inform you if a value introduced by you doesn't make sense (i.e, outer diameter < inner diameter,...).
 
 ## 3. Assembly
 
@@ -60,7 +55,7 @@ For the assembly of the bearings follow next steps:
 </p>
 
 7. Finish by inserting BBs until there is no more room left.
-8. Turn the bearing and see if it turn smoothly.
+8. Turn the bearing and see if it turns smoothly.
 
 
 ## 4. Disassembly
