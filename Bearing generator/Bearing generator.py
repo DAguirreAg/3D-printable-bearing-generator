@@ -1,6 +1,8 @@
 #Author-Daniel Aguirre
-#Description-A script for making custom made bearing with a 3D printer and some BB´s
-import adsk.core, adsk.fusion, traceback
+#Description-A script for making custom made bearings with a 3D printer and some BB balls
+
+import adsk.core, adsk.fusion, adsk.cam, traceback
+
 import math
 
 # Bearings variables
@@ -10,15 +12,30 @@ _units = "mm"
 h = 10
 di = 9
 do = 30
-dbb = 6
+dbb = 7
 dbb_extract = 2
-wgap = 1
+wgap = 1.5
 
 
 def run(context):
     ui = None
-    try:
-        #checkValues()
+    try:    
+        global h, di, do, dbb, dbb_extract, wgap
+        # Check values bigger than 0
+        ## TO DO
+        
+        # Check there is enough space for the balls
+        if ((do-di)/2 <= dbb):
+            thickness = 2
+            do = 2*(dbb + 2*thickness) + di
+            if ui:
+                ui.messageBox("Bearing's width too thin. Modified Outside diameter to: " + str(do))
+                
+        if (h <= dbb):
+            thickness = 0.2
+            h = h + 2*thickness
+            if ui:
+                ui.messageBox("Bearing's width too thin. Modified Thickness to: " + str(h))
     
         # Convert to "cm" (because scripts works with cm)    
         if _units == "mm": # 1mm -> 0.1cm 
@@ -28,7 +45,7 @@ def run(context):
         else:
             scale = 1
        
-        global h, di, do, dbb, dbb_extract, wgap
+        
             
         h = h*scale
         di = di*scale
@@ -125,23 +142,4 @@ def run(context):
         if ui:
             ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
             
-            
-            
-def checkInputValues():
-    
-    # Check values bigger than 0
-    ## TO DO
-    
-    # Check there is enough space for the balls
-    if ((do-di)/2 <= dbb):
-        thickness = 2
-        do = 2*(dbb + 2*thickness) + di
-        if ui:
-            ui.messageBox("Bearing's width too thin. Modified Outside diameter to: " + str(do))
-            
-    if (h <= dbb):
-        thickness = 0.2
-        h = h + 2*thickness
-        if ui:
-            ui.messageBox("Bearing's width too thin. Modified Thickness to: " + str(h))
             
