@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"script",
+	"author":	"Daniel Aguirre",
+	"description":	{
+		"":	"A script for making custom made bearing with a 3D printer and some BB´s"
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
