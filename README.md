@@ -69,7 +69,7 @@ The disassembly process could be a little bit troublesome depending on the toler
   <img src="/images/Disassemble process.jpg" alt="Disassemble process" width=300>
 </p>
 
-## 4. Software
+## 5. Software
 The script works in the following manner:
 
 1. Check the input parameters are correct
@@ -78,7 +78,7 @@ The script works in the following manner:
 4. Draw the BB ball circle and revolute it (cut operation).
 5. Draw the insertion and extraction circles and extrude them (cut operation).
 
-## 5. Requirements
+## 6. Requirements
 You should install/have the following:
 
 * Fusion 360
